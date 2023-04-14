@@ -1,13 +1,23 @@
+@font-face {
+  font-family: Baskervville;
+  src: url(assets/fonts/Baskervville-Regular.ttf) format("truetype");
+}
+
 :root {
   --tea_rose: var(#dbb3b1);
   --rosy_brown: var(#c89fa3);
   --mountb_pink: var(#a67f8e);
   --liver: var(#6c534e);
   --licorice: var(#2c1a1d);
-  font-family: "Baskervville", serif;
 }
 
 body {
   padding: 0;
-  margin: 0;
+  margin: 5rem 0 0 0;
+  background-color: #fffafa;
+  overflow: hidden;
+  font-family: Baskervville;
+  color: #2c1a1d;
+  font-size: 21px;
+  text-decoration: none;
 }
