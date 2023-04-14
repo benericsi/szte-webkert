@@ -4,7 +4,7 @@ nav {
   left: 0;
   height: 4rem;
   width: 100%;
-  background-color: #a67f8e;
+  background-color: transparent;
   z-index: 99;
   display: flex;
   align-items: center;
@@ -53,7 +53,7 @@ li {
 }
 
 li:hover {
-  color: white;
+  color: var(--orange);
   cursor: pointer;
 }
 
@@ -62,13 +62,13 @@ li:hover {
   justify-content: center;
   align-items: center;
   position: absolute;
-  right: 5%;
+  right: 2%;
   float: right;
   margin: 0 15px 0 15px;
 }
 
 .checkbtn:hover {
-  color: white;
+  color: var(--orange);
   cursor: pointer;
 }
 
@@ -87,18 +87,19 @@ li:hover {
 }
 
 @media screen and (max-width: 767px) {
+  nav {
+    background-color: var(--black);
+  }
+
   .checkbtn {
     display: flex;
   }
 
   .icon_ul {
-    margin-right: 15%;
+    margin: 0;
+    margin-right: 12%;
     column-gap: 15px;
-  }
-
-  .ic {
-    height: 20px;
-    width: 20px;
+    height: 100%;
   }
 
   .kkk {
@@ -109,7 +110,7 @@ li:hover {
     left: -100%;
     text-align: center;
     z-index: 9;
-    background-color: #dbb3b1;
+    background-color: var(--lightblue);
     padding: 1rem 0;
     margin: 0;
     transition: all 1s cubic-bezier(0.2, 0.84, 0.05, 0.97);

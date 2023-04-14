@@ -3,21 +3,63 @@
   src: url(assets/fonts/Baskervville-Regular.ttf) format("truetype");
 }
 
+@font-face {
+  font-family: Oswald;
+  src: url(assets/fonts/Oswald-VariableFont_wght.ttf) format("truetype");
+}
+
 :root {
-  --tea_rose: var(#dbb3b1);
-  --rosy_brown: var(#c89fa3);
-  --mountb_pink: var(#a67f8e);
-  --liver: var(#6c534e);
-  --licorice: var(#2c1a1d);
+  /*
+  --light-pink: #fdf1f1;
+  --tea_rose: #dbb3b1;
+  --rosy_brown: #c89fa3;
+  --mountb_pink: #a67f8e;
+  --liver: #6c534e;
+  --licorice: #2c1a1d;
+  */
+
+  --white: #e6e6e6;
+  --black: #142327;
+  --beige: #b38c64;
+  --grey: #71614d;
+  --darkgrey: #464337;
+  --blue: #374f57;
+  --lightblue: #4d5e5e;
+  --stone: #8a8c7e;
+  --orange: #945420;
 }
 
 body {
   padding: 0;
-  margin: 5rem 0 0 0;
-  background-color: #fdf1f1;
-  overflow: hidden;
-  font-family: Baskervville;
-  color: #2c1a1d;
+  margin: 0;
+  background-color: var(--black);
+  font-family: Oswald;
+  color: var(--white);
   font-size: 22px;
   text-decoration: none;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/*
+::-webkit-scrollbar-track {
+  background: transparent;
+  margin-block: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--beige);
+  border-radius: 1rem;
+  cursor: grab;
+  border: 0.25em solid var(--grey);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--grey);
+  transition: background-color 0.25s ease-in-out;
+}
+*/
