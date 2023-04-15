@@ -5,22 +5,28 @@
   </label>
   <label for="" class="logo">Rug&Roll</label>
   <ul class="kkk">
-    <li><a href="">Kezdőlap</a></li>
+    <li><a href="" [routerLink]="'/home'">Kezdőlap</a></li>
     /
-    <li><a href="">Kínálat</a></li>
+    <li><a href="" [routerLink]="'/gallery'">Kínálat</a></li>
     /
-    <li><a href="">Kapcsolat</a></li>
+    <li><a href="" [routerLink]="'/contact'">Kapcsolat</a></li>
   </ul>
 
   <ul class="icon_ul">
     <li>
-      <a href=""><mat-icon svgIcon="profile" class="ic"></mat-icon></a>
+      <a href="" [routerLink]="'/home'"
+        ><mat-icon svgIcon="profile" class="ic"></mat-icon
+      ></a>
     </li>
     <li>
-      <a href=""><mat-icon svgIcon="heart" class="ic"></mat-icon></a>
+      <a href="" [routerLink]="'/favourites'"
+        ><mat-icon svgIcon="heart" class="ic"></mat-icon
+      ></a>
     </li>
     <li>
-      <a href=""><mat-icon svgIcon="cart" class="ic"></mat-icon></a>
+      <a href="" [routerLink]="'/gallery'"
+        ><mat-icon svgIcon="cart" class="ic"></mat-icon
+      ></a>
     </li>
   </ul>
 </nav>

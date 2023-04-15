@@ -10,7 +10,6 @@ export class AppComponent {
   title = 'MyApp';
   page = 'home';
 
-
   constructor(
     private matIconRegistry: MatIconRegistry,
     private domSanitizer: DomSanitizer

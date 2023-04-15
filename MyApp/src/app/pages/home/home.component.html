@@ -6,7 +6,7 @@
     </p>
   </section>
   <section id="content_sect">
-    <h1>Miért minket válassz?</h1>
+    <h1>Miért válassz minket?</h1>
     <div>
       <h3>Mert szőnyegeink különlegesebbek, mint gondolnád!</h3>
       <p>
@@ -24,7 +24,9 @@
         csupán egy kis vízre és néhány percre van szükséged, hogy maradéktalanul
         eltávolíthasd a makacs kávéfoltot!
       </p>
-      <button type="button" id="explore_btn">Fedezd fel most!</button>
+      <button type="button" id="explore_btn" [routerLink]="'/gallery'">
+        Fedezd fel most!
+      </button>
     </div>
 
     <div>
@@ -47,6 +49,6 @@
     </div>
   </section>
   <section id="form_sect">
-    <h1>Csatlakozz hozzánk!</h1>
+    <h1 id="reg_log">Csatlakozz hozzánk!</h1>
   </section>
 </div>
