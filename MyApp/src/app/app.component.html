@@ -1,8 +1,18 @@
 <app-menu></app-menu>
-<app-home *ngIf="page === 'home'"></app-home>
-<app-gallery *ngIf="page === 'gallery'"></app-gallery>
-<app-item *ngIf="page === 'item'"> </app-item>
-<app-favourites *ngIf="page === 'favourites'"> </app-favourites>
-<app-admin *ngIf="page === 'admin'"> </app-admin>
+<ng-template [ngIf]="page === 'home'">
+  <app-home></app-home>
+</ng-template>
+<ng-template [ngIf]="page === 'gallery'">
+  <app-gallery></app-gallery>
+</ng-template>
+<ng-template [ngIf]="page === 'item'">
+  <app-item> </app-item>
+</ng-template>
+<ng-template [ngIf]="page === 'favourites'">
+  <app-favourites> </app-favourites>
+</ng-template>
+<ng-template [ngIf]="page === 'admin'">
+  <app-admin> </app-admin>
+</ng-template>
 
 <!-- <router-outlet></router-outlet> -->

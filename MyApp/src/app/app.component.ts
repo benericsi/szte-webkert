@@ -31,6 +31,7 @@ export class AppComponent {
       'hamburger',
       this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/svg/bars-solid.svg')
     )
-
   }
 }
+
+
