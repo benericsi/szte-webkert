@@ -55,7 +55,109 @@ section::before {
   font-size: 3vw;
 }
 
+#content_sect {
+  display: flex;
+  flex-direction: row;
+}
+
+#content_sect div {
+  flex: 50%;
+  height: calc(100% - margin-top);
+  padding: 0 2%;
+  top: 0;
+  left: 0;
+  margin-top: 8rem;
+  position: relative;
+}
+
+#content_sect h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: left;
+  margin: 2% 0 0 2%;
+  font-size: 4rem;
+  width: 100%;
+}
+
+#content_sect div h3 {
+  color: var(--orange);
+  font-size: 2rem;
+}
+
+#content_sect div p {
+  text-indent: 20px;
+  text-align: justify;
+  font-size: 1.75rem;
+}
+#explore_btn {
+  all: unset;
+  position: absolute;
+  color: var(--beige);
+  border-bottom: 1px solid var(--blue);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#explore_btn:hover {
+  color: var(--white);
+  cursor: pointer;
+}
+
+#explore_btn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  width: 0;
+  background-color: var(--white);
+  transition: width 0.15s ease-out;
+}
+#explore_btn:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+@media screen and (max-width: 1440px) {
+  #content_sect div h3 {
+    font-size: 1.75rem;
+  }
+
+  #content_sect div p {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  #content_sect div h3 {
+    font-size: 1.5rem;
+  }
+
+  #content_sect div p {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #content_sect h1 {
+    font-size: 2.75rem;
+  }
+
+  #content_sect div h3 {
+    font-size: 1.25rem;
+  }
+
+  #content_sect div p {
+    font-size: 1rem;
+  }
+}
+
 @media screen and (max-width: 600px) {
+  #content_sect {
+    flex-direction: column;
+  }
+
   #title_text {
     top: 15%;
     font-size: 15vh;
@@ -63,5 +165,51 @@ section::before {
 
   #szlogen {
     font-size: 3vh;
+  }
+
+  #content_sect h1 {
+    font-size: 2.5rem;
+  }
+
+  #content_sect div {
+    margin-top: 4rem;
+    flex: 100%;
+  }
+
+  #content_sect div:last-child {
+    margin-top: 0;
+  }
+
+  #content_sect div h3:last-child {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #content_sect h1 {
+    font-size: 2rem;
+  }
+
+  #content_sect div {
+    margin-top: 3rem;
+    flex-direction: row;
+  }
+
+  #content_sect div h3 {
+    font-size: 1.1rem;
+  }
+
+  #content_sect div p {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 385px) {
+  #content_sect div h3 {
+    font-size: 1.1rem;
+  }
+
+  #content_sect div p {
+    font-size: 0.85rem;
   }
 }
