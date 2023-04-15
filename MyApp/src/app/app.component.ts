@@ -8,7 +8,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class AppComponent {
   title = 'MyApp';
-  page = 'contact';
+  page = 'home';
 
 
   constructor(

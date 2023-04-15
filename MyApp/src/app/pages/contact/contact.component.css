@@ -1,23 +1,29 @@
 .contacts {
   width: 100%;
-  height: calc(100vh - 5rem);
-  margin-top: 5rem;
+  height: 100vh;
   padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(../../../assets/images/12-flourishing-indigo.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .contacts h1 {
   font-size: 4rem;
   margin: 0 0 4rem 0;
   color: var(--white);
+  text-align: center;
 }
 
 .contacts h3 {
   color: var(--white);
   margin: 0;
+  text-align: center;
 }
 
 .contacts ul {
