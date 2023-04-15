@@ -41,6 +41,17 @@ body {
   overflow-x: hidden;
 }
 
+.container {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }

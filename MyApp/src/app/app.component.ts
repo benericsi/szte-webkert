@@ -8,7 +8,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class AppComponent {
   title = 'MyApp';
-  page = 'home';
+  page = 'contact';
 
 
   constructor(
@@ -30,6 +30,14 @@ export class AppComponent {
     this.matIconRegistry.addSvgIcon(
       'hamburger',
       this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/svg/bars-solid.svg')
+    )
+    this.matIconRegistry.addSvgIcon(
+      'facebook',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/svg/facebook.svg')
+    )
+    this.matIconRegistry.addSvgIcon(
+      'instagram',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/svg/instagram.svg')
     )
   }
 }
