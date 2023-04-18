@@ -133,6 +133,8 @@ h6 {
 
 .more_btn:hover {
   cursor: pointer;
+  background-color: var(--orange);
+  color: var(--black);
 }
 
 @media screen and (max-width: 1150px) {
