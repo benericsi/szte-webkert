@@ -47,7 +47,7 @@ h5 {
 }
 
 h5:last-child {
-  margin-left: 15%;
+  margin-left: 5%;
 }
 
 .item {
@@ -70,7 +70,7 @@ h5:last-child {
   top: 30px;
   width: 50px;
   height: 25px;
-  background-color: var(--stone);
+  background-color: var(--beige);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -84,8 +84,8 @@ h5:last-child {
 
 .fav_item_ic {
   color: white;
-  width: 21x;
-  height: 21px;
+  width: 15x;
+  height: 15px;
 }
 
 .fav_item_ic:hover {
@@ -94,16 +94,16 @@ h5:last-child {
 }
 
 .carpet_img {
-  width: 275px;
+  width: 100%;
   height: 275px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .carpet_img img {
-  width: 100%;
-  height: 100%;
+  width: 275px;
+  height: 275px;
 }
 
 h6 {
@@ -152,5 +152,13 @@ h6 {
   .items {
     grid-template-columns: repeat(1, 1fr);
     padding: 2rem 0 2rem 0;
+  }
+
+  h5 {
+    width: 100%;
+    display: block;
+  }
+  h5:last-child {
+    margin: 0;
   }
 }
