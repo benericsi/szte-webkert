@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -6,5 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent {
+  isGalleryRoute: boolean = false;
+
+
+  constructor(private router: Router) { }
+  
+  ngOnInit() {
+  this.router.events.subscribe((event) => {
+    if (event instanceof NavigationEnd) {
+      this.isGalleryRoute = event.url === '/gallery';
+    }
+  });
+}
 
 }

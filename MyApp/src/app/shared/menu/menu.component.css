@@ -4,11 +4,16 @@ nav {
   left: 0;
   height: 4rem;
   width: 100%;
-  background-color: var(--black);
+  background-color: transparent;
+  backdrop-filter: blur(20px);
   z-index: 99;
   display: flex;
   align-items: center;
   padding: 0 2% 0 2%;
+}
+
+nav.specific {
+  background-color: var(--black);
 }
 
 label.logo {
