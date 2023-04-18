@@ -1,6 +1,49 @@
 section {
   width: 100%;
-  min-height: 100vh;
-  padding-top: 5rem;
+  min-height: calc(100vh - 5rem);
   position: relative;
+  background-color: white;
+  color: var(--blue);
+}
+
+h1 {
+  width: 100%;
+  height: fit-content;
+  font-size: 2rem;
+  color: var(--blue);
+}
+
+h2 {
+  color: var(--orange);
+}
+
+h2 .ft {
+  color: var(--blue);
+}
+
+.data_cont {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.data {
+  padding: 5rem 2% 0 2%;
+  background-color: white;
+}
+
+.to_cart {
+  padding: 5rem 2% 0 2rem;
+  background-color: var(--stone);
+}
+
+@media screen and (max-width: 767px) {
+  .data_cont {
+    grid-template-columns: 1fr;
+  }
+
+  .to_cart {
+    padding: 0rem 2% 0 2%;
+  }
 }

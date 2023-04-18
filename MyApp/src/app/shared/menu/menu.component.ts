@@ -15,7 +15,7 @@ export class MenuComponent {
   ngOnInit() {
   this.router.events.subscribe((event) => {
     if (event instanceof NavigationEnd) {
-      this.isGalleryRoute = event.url === '/gallery';
+      this.isGalleryRoute = ((event.url === '/gallery') || (event.url === '/item'));
     }
   });
 }

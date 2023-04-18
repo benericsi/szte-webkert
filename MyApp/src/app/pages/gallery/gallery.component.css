@@ -119,6 +119,10 @@ h6 {
   color: var(--orange);
 }
 
+.price_h6 .ft {
+  color: var(--blue);
+}
+
 .more_btn {
   all: unset;
   width: 100%;
