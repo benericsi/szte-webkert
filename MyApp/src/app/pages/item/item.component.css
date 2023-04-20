@@ -85,6 +85,7 @@ h2 .ft {
   margin: 0;
   all: unset;
   background-color: var(--black);
+
   color: var(--white);
   text-align: center;
   text-decoration: none;
