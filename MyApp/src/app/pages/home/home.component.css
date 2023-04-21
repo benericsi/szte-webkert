@@ -130,6 +130,7 @@ section::before {
   width: 60vw;
   display: grid;
   grid-template-columns: 2fr 2fr 1fr;
+  overflow: hidden;
 }
 
 .form_img {
@@ -150,6 +151,7 @@ section::before {
 .login_form h2,
 .reg_form h2 {
   margin-top: 40px;
+  margin-bottom: 50px;
   text-align: center;
 }
 
@@ -167,10 +169,6 @@ section::before {
 .reg_form {
   background-color: var(--white);
   color: var(--blue);
-}
-
-.reg_form h2 {
-  margin-bottom: 50px;
 }
 
 .input_div {
@@ -192,7 +190,7 @@ section::before {
   border-bottom: 1px solid var(--beige);
 }
 
-#signup_btn {
+.signup_btn {
   all: unset;
   margin-top: 10px;
   border-radius: 5px;
@@ -202,7 +200,7 @@ section::before {
   font-weight: bold;
 }
 
-#signup_btn:hover {
+.signup_btn:hover {
   cursor: pointer;
   color: var(--orange);
   background-color: var(--blue);
@@ -215,6 +213,11 @@ section::before {
 
   #content_sect div p {
     font-size: 1.5rem;
+  }
+
+  .reg_form h2,
+  .login_form h2 {
+    margin: 15px 0;
   }
 }
 
@@ -229,6 +232,11 @@ section::before {
 
   .forms {
     width: 80vw;
+  }
+
+  .reg_form h2,
+  .login_form h2 {
+    margin: 10px 0;
   }
 }
 
@@ -247,16 +255,23 @@ section::before {
   }
   .forms {
     grid-template-columns: 1fr;
-    height: 90vh;
-    margin-top: 5rem;
+    height: 80vh;
+    margin-top: 0;
   }
 
   .form_img {
     display: none;
   }
 
-  .reg_form h2 {
-    margin-bottom: 20px;
+  .reg_form h2,
+  .login_form h2 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+  }
+
+  #signup_btn {
+    margin-top: 5px;
+    padding: 5px;
   }
 }
 

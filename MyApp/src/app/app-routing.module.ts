@@ -8,6 +8,10 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
+    path: '#welcome_sect',
+    component: HomeComponent
+  },
+  {
   path: 'home',
   loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
   },

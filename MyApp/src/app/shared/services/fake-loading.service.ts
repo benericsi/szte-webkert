@@ -7,6 +7,17 @@ export class FakeLoadingService {
 
   constructor() { }
 
-  
+  loadingWithPromise(): Promise<number>{ 
 
+    return new Promise((resolve, reject) => {
+      let i = 0;
+      const interval = setInterval(() => {
+        i++;
+        if (i === 1) {
+          clearInterval(interval);
+          resolve(i);
+        }
+      }, 1000)
+    })
+  }
 }
