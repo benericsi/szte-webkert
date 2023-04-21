@@ -52,35 +52,60 @@
     <h1 id="reg_log">Csatlakozz hozzánk!</h1>
     <div class="form_cont" id="forms">
       <div class="forms">
-        <div class="form_img"></div>
         <div class="login_form">
-          <h2>Bejelentkezés</h2>
+          <h2>Üdv újra!</h2>
         </div>
         <div class="reg_form">
-          <h2>Regisztráció</h2>
-          <form [formGroup]="signupForm">
-            <div>
-              <label for="email">E-Mail: </label
-              ><input type="text" formControlName="email" />
+          <h2>Most jársz itt először?</h2>
+          <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+            <div class="input_div">
+              <input
+                type="text"
+                formControlName="email"
+                placeholder="E-Mail"
+                class="signup_input"
+              />
             </div>
-            <div>
-              <label for="firstname">Vezetéknév: </label
-              ><input type="text" formControlName="firstname" />
+            <div formGroupName="name">
+              <div class="input_div">
+                <input
+                  type="text"
+                  formControlName="firstname"
+                  placeholder="Vezetéknév"
+                  class="signup_input"
+                />
+              </div>
+              <div class="input_div">
+                <input
+                  type="text"
+                  formControlName="lastname"
+                  placeholder="Keresztnév"
+                  class="signup_input"
+                />
+              </div>
             </div>
-            <div>
-              <label for="lastname">Keresztnév: </label
-              ><input type="text" formControlName="lastname" />
+            <div class="input_div">
+              <input
+                type="password"
+                formControlName="password"
+                placeholder="Jelszó"
+                class="signup_input"
+              />
             </div>
-            <div>
-              <label for="password">Jelszó: </label
-              ><input type="password" formControlName="password" />
+            <div class="input_div">
+              <input
+                type="rePassword"
+                formControlName="rePassword"
+                placeholder="Jelszó újra"
+                class="signup_input"
+              />
             </div>
-            <div>
-              <label for="rePassword">Jelszó újra: </label
-              ><input type="rePassword" formControlName="rePassword" />
+            <div class="input_div">
+              <button type="submit" id="signup_btn">Regisztráció</button>
             </div>
           </form>
         </div>
+        <div class="form_img"></div>
       </div>
     </div>
   </section>

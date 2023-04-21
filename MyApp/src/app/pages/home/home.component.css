@@ -126,10 +126,10 @@ section::before {
 }
 
 .forms {
-  height: 70vh;
-  width: 80vw;
+  height: 60vh;
+  width: 60vw;
   display: grid;
-  grid-template-columns: 1fr 3fr 3fr;
+  grid-template-columns: 2fr 2fr 1fr;
 }
 
 .form_img {
@@ -149,7 +149,7 @@ section::before {
 
 .login_form h2,
 .reg_form h2 {
-  margin: 2% 0;
+  margin-top: 40px;
   text-align: center;
 }
 
@@ -167,6 +167,45 @@ section::before {
 .reg_form {
   background-color: var(--white);
   color: var(--blue);
+}
+
+.reg_form h2 {
+  margin-bottom: 50px;
+}
+
+.input_div {
+  width: 100%;
+  height: auto;
+  margin: 20px 0 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.signup_input {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: 30px;
+  all: unset;
+  border-bottom: 1px solid var(--beige);
+}
+
+#signup_btn {
+  all: unset;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--stone);
+  padding: 10px;
+  background-color: var(--orange);
+  font-weight: bold;
+}
+
+#signup_btn:hover {
+  cursor: pointer;
+  color: var(--orange);
+  background-color: var(--blue);
 }
 
 @media screen and (max-width: 1440px) {
@@ -187,6 +226,10 @@ section::before {
   #content_sect div p {
     font-size: 1.25rem;
   }
+
+  .forms {
+    width: 80vw;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -201,6 +244,19 @@ section::before {
 
   #content_sect div p {
     font-size: 1rem;
+  }
+  .forms {
+    grid-template-columns: 1fr;
+    height: 90vh;
+    margin-top: 5rem;
+  }
+
+  .form_img {
+    display: none;
+  }
+
+  .reg_form h2 {
+    margin-bottom: 20px;
   }
 }
 
