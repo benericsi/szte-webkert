@@ -113,6 +113,62 @@ section::before {
   left: 0;
 }
 
+#form_sect {
+  position: relative;
+  height: 100vh;
+}
+
+.form_cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.forms {
+  height: 70vh;
+  width: 80vw;
+  display: grid;
+  grid-template-columns: 1fr 3fr 3fr;
+}
+
+.form_img {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url("../../../assets/images/8-flourishing-indigo.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.login_form {
+  background-color: var(--white);
+  color: var(--blue);
+  position: relative;
+}
+
+.login_form h2,
+.reg_form h2 {
+  margin: 2% 0;
+  text-align: center;
+}
+
+.login_form::before {
+  content: "";
+  width: 1px;
+  margin-top: 2%;
+  height: 96%;
+  background-color: var(--beige);
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.reg_form {
+  background-color: var(--white);
+  color: var(--blue);
+}
+
 @media screen and (max-width: 1440px) {
   #content_sect div h3 {
     font-size: 1.75rem;

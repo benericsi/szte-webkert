@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 
 @Component({
@@ -6,18 +6,17 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css']
 })
-export class MenuComponent {
+export class MenuComponent implements OnInit{
   isGalleryRoute: boolean = false;
-
 
   constructor(private router: Router) { }
   
   ngOnInit() {
-  this.router.events.subscribe((event) => {
-    if (event instanceof NavigationEnd) {
-      this.isGalleryRoute = ((event.url === '/gallery') || (event.url === '/item'));
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.isGalleryRoute = ((event.url === '/gallery') || (event.url === '/item'));
+      }
     }
-  });
-}
-
+    );
+  }
 }

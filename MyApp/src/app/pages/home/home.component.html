@@ -50,5 +50,38 @@
   </section>
   <section id="form_sect">
     <h1 id="reg_log">Csatlakozz hozzánk!</h1>
+    <div class="form_cont" id="forms">
+      <div class="forms">
+        <div class="form_img"></div>
+        <div class="login_form">
+          <h2>Bejelentkezés</h2>
+        </div>
+        <div class="reg_form">
+          <h2>Regisztráció</h2>
+          <form [formGroup]="signupForm">
+            <div>
+              <label for="email">E-Mail: </label
+              ><input type="text" formControlName="email" />
+            </div>
+            <div>
+              <label for="firstname">Vezetéknév: </label
+              ><input type="text" formControlName="firstname" />
+            </div>
+            <div>
+              <label for="lastname">Keresztnév: </label
+              ><input type="text" formControlName="lastname" />
+            </div>
+            <div>
+              <label for="password">Jelszó: </label
+              ><input type="password" formControlName="password" />
+            </div>
+            <div>
+              <label for="rePassword">Jelszó újra: </label
+              ><input type="rePassword" formControlName="rePassword" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </section>
 </div>
