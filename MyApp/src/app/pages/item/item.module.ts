@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { ItemRoutingModule } from './item-routing.module';
 import { ItemComponent } from './item.component';
-import {MatListModule} from '@angular/material/list';
+import { MatListModule } from '@angular/material/list';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import {MatListModule} from '@angular/material/list';
   imports: [
     CommonModule,
     ItemRoutingModule,
-    MatListModule
+    MatListModule,
+    MatExpansionModule
   ]
 })
 export class ItemModule { }

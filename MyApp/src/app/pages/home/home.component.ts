@@ -34,10 +34,8 @@ export class HomeComponent{
 
   signupForm = this.createSignupForm({
     email: '',
-    name: {
-      firstname: '',
-      lastname: ''
-    },
+    firstname: '',
+    lastname: '',
     password: '',
   })
 
@@ -47,7 +45,6 @@ export class HomeComponent{
     formGroup.get('firstname')?.addValidators([Validators.required]);
     formGroup.get('lastname')?.addValidators([Validators.required]);
     formGroup.get('password')?.addValidators([Validators.required, Validators.minLength(5)]);
-    formGroup.get('rePassword')?.addValidators([Validators.required]);
     return formGroup;
   }
 

@@ -126,7 +126,7 @@ section::before {
 }
 
 .forms {
-  height: 60vh;
+  height: 70vh;
   width: 60vw;
   display: grid;
   grid-template-columns: 2fr 2fr 1fr;
@@ -180,14 +180,8 @@ section::before {
   justify-content: space-around;
 }
 
-.example-form {
-  min-width: 150px;
-  max-width: 500px;
-  width: 100%;
-}
-
-.example-full-width {
-  width: 100%;
+.example-form-field {
+  width: 200px;
 }
 
 .signup_input {

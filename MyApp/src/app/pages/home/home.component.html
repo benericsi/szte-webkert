@@ -72,7 +72,7 @@
               />
             </div>
             <div class="input_div">
-              <button type="submit" class="signup_btn">Bejelentezés</button>
+              <button mat-stroked-button color="warn">Bejelentezés</button>
             </div>
           </form>
         </div>
@@ -87,23 +87,21 @@
                 class="signup_input"
               />
             </div>
-            <div formGroupName="name">
-              <div class="input_div">
-                <input
-                  type="text"
-                  formControlName="firstname"
-                  placeholder="Vezetéknév"
-                  class="signup_input"
-                />
-              </div>
-              <div class="input_div">
-                <input
-                  type="text"
-                  formControlName="lastname"
-                  placeholder="Keresztnév"
-                  class="signup_input"
-                />
-              </div>
+            <div class="input_div">
+              <input
+                type="text"
+                formControlName="firstname"
+                placeholder="Vezetéknév"
+                class="signup_input"
+              />
+            </div>
+            <div class="input_div">
+              <input
+                type="text"
+                formControlName="lastname"
+                placeholder="Keresztnév"
+                class="signup_input"
+              />
             </div>
             <div class="input_div">
               <input
@@ -114,15 +112,7 @@
               />
             </div>
             <div class="input_div">
-              <input
-                type="rePassword"
-                formControlName="rePassword"
-                placeholder="Jelszó újra"
-                class="signup_input"
-              />
-            </div>
-            <div class="input_div">
-              <button type="submit" class="signup_btn">Regisztráció</button>
+              <button mat-stroked-button color="warn">Regisztráció</button>
             </div>
           </form>
         </div>
