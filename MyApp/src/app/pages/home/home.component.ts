@@ -65,6 +65,7 @@ export class HomeComponent{
     }).finally(() => { 
       console.log('Executed finally');
     });
+
   
   }
   

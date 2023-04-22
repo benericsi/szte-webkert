@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable, Subscriber } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +18,22 @@ export class FakeLoadingService {
           clearInterval(interval);
           resolve(i);
         }
-      }, 1000)
+      }, 250)
     })
   }
+  /*
+  loadingWithObservable(email: string, password: string, firstname: string, lastname:string, rePassword: string): Observable<number> { 
+    return new Observable((subscriber: Subscriber<number>) => {
+      let i = 0;
+      const interval = setInterval(() => {
+        i++;
+        subscriber.next(i);
+        if (i === 1) {
+          clearInterval(interval);
+          subscriber.complete();
+        }
+      }, 1000)
+    });
+  }
+  */
 }
