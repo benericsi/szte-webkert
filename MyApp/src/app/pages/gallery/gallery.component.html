@@ -3,15 +3,16 @@
     <h1>Szőnyegek</h1>
     <div id="sort">
       <h5>Termék: &nbsp;&nbsp;&nbsp;&nbsp; {{ sum }} db</h5>
-      <h5>
-        Rendezés: &nbsp;&nbsp;&nbsp;&nbsp;
-        <select name="" id="filter">
-          <option value="az" selected>Név szerint (A-Z)</option>
-          <option value="za">Név szerint (Z-A)</option>
-          <option value="arnov">Ár szerint növekvő</option>
-          <option value="arcsokk">Ár szerint csökkenő</option>
-        </select>
-      </h5>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Rendezés</mat-label>
+        <mat-select [(value)]="selected">
+          <mat-option value="az">Név szerint (A-Z)</mat-option>
+          <mat-option value="za">Név szerint (Z-A)</mat-option>
+          <mat-option value="arnov">Ár szerint(növekvő)</mat-option>
+          <mat-option value="arcsokk">Ár szerint(csökkenő)</mat-option>
+        </mat-select>
+      </mat-form-field>
     </div>
     <div class="items">
       <div class="item" *ngFor="let product of productObject">

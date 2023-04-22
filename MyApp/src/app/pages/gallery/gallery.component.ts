@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { Product } from '../../shared/models/Product';
 import { GalleryService } from '../../shared/services/gallery.service';
+
+
 
 @Component({
   selector: 'app-gallery',
@@ -11,6 +13,8 @@ import { GalleryService } from '../../shared/services/gallery.service';
 export class GalleryComponent implements OnInit{
 
   constructor(private router: Router, private galleryService: GalleryService) { }
+
+  selected = 'az';
 
   productObject?: Array<Product>;
   chosenProduct?: Product;

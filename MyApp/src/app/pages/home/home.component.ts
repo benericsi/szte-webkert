@@ -1,23 +1,36 @@
 import { Component} from '@angular/core';
-import { FormBuilder, FormControl, FormControlName, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormControlName, FormGroup, FormGroupDirective, NgForm, Validators } from '@angular/forms';
 import { Route, Router } from '@angular/router';
 import { FakeLoadingService } from '../../shared/services/fake-loading.service';
 import { User } from '../../shared/models/User';
+import { ErrorStateMatcher } from '@angular/material/core';
 
-@Component({
+export class MyErrorStateMatcher implements ErrorStateMatcher {
+  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+    const isSubmitted = form && form.submitted;
+    return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
+  }
+}
+
+@Component(
+  {
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
-})
+}
+  
+)
 export class HomeComponent{
 
-
   constructor(private router: Router, private fb: FormBuilder, private loadingService: FakeLoadingService) { }
+
+  matcher = new MyErrorStateMatcher();
 
   loginForm = new FormGroup({
     login_email: new FormControl(''),
     login_pw: new FormControl('')
   })
+
 
   signupForm = this.createSignupForm({
     email: '',
@@ -56,6 +69,7 @@ export class HomeComponent{
       if (data === 1) {
         if (this.loginForm.get('login_email')?.value === 'asd' && this.loginForm.get('login_pw')?.value === 'asd') {
           this.router.navigateByUrl('/home#welcome_sect');
+          alert('Sikeres bejelentkezés!');
         } else {
           alert('Hibás bejelentkezési adatok!');
         }

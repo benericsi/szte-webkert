@@ -124,15 +124,15 @@ h2 .ft {
   color: var(--beige);
 }
 
-ul {
-  list-style: none;
+mat-list {
+  color: var(--blue);
 }
 
-ul li {
+mat-list-item {
   margin: 5px 0 5px 0;
 }
 
-ul li span {
+span {
   font-weight: bold;
   margin-right: 1rem;
 }
@@ -184,7 +184,7 @@ ul li span {
     font-size: 1.1rem;
   }
 
-  ul li {
+  mat-list mat-list-item {
     font-size: 1rem;
     margin: 0;
     padding: 0;
