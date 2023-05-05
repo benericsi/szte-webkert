@@ -1,6 +1,7 @@
+
 [
     {
-      "id": 1,
+      "id": "RURO0044",
       "title":  "BLUR S MODERN KÉK-MUSTÁRSÁRGA ABSZTRAKT MINTÁS FUTÓSZŐNYEG 80 X 200 CM",
       "img": "https://www.rugandroll.hu/img/33928/RURO0044/440x440,r/BLUR-S-Modern-kek-mustarsarga-Absztrakt-mintas-futoszonyeg-80x200.webp?time=1679924957",
       "size": "80x200",
@@ -9,11 +10,10 @@
       "pattern": "absztrakt",
       "volume": 968,
       "from": "Törökország",
-      "qualiy": "OEKO-TEX®100",
-      "quantity": 1
+      "qualiy": "OEKO-TEX®100"
     },
     {
-      "id": 2,
+      "id": "RURO0010",
       "title":  "MARRAKESH BLACK & WHITE S GEOMETRIKUS FEKETE-FEHÉR MAROKKÓI MINTÁS FUTÓSZŐNYEG 80 X 200 CM",
       "img": "https://www.rugandroll.hu/img/33928/RURO0010/440x440,r/MARRAKESH-Black-and-White-S-Geometrikus-fekete-feher-Marokkoi-mintas-futoszonyeg-80x200.webp?time=1679918716",
       "size": "80x200",
@@ -22,11 +22,10 @@
       "pattern": "marokkói",
       "volume": 783,
       "from": "Törökország",
-      "qualiy": "OEKO-TEX®100",
-      "quantity": 1
+      "qualiy": "OEKO-TEX®100"
     },
     {
-      "id": 3,
+      "id": "RURO0070",
       "title":  "SKANDINAV DARK SM GEOMETRIKUS FEKETE-NARANCS CSÍKOS MINTÁS FUTÓSZŐNYEG 80 X 300 CM",
       "img": "https://www.rugandroll.hu/img/33928/RURO0070/440x440,r/SKANDINAV-Dark-SM-Geometrikus-fekete-narancs-csikos-mintas-futoszonyeg-80x200.webp?time=1668529627",
       "size": "80x300",
@@ -35,11 +34,10 @@
       "pattern": "geometrikus",
       "volume": 910 ,
       "from": "Törökország",
-      "qualiy": "OEKO-TEX®100",
-      "quantity": 1
+      "qualiy": "OEKO-TEX®100"
     },
     {
-      "id": 4,
+      "id": "RURO0036",
       "title":  "MARMOR L MODERN VILÁGOSKÉK-SÖTÉTKÉK ABSZTRAKT MINTÁS SZŐNYEG 160 X 230 CM",
       "img": "https://www.rugandroll.hu/img/33928/RURO0036/440x440,r/MARMOR-L-Modern-vilagoskek-sotetkek-Absztrakt-mintas-szonyeg-160x230.webp?time=1668527129",
       "size": "160x230",
@@ -48,11 +46,10 @@
       "pattern": "absztrakt",
       "volume": 910 ,
       "from": "Törökország",
-      "qualiy": "OEKO-TEX®100",
-      "quantity": 1
+      "qualiy": "OEKO-TEX®100"
     },
     {
-      "id": 5,
+      "id": "RURO0074",
       "title":  "BARCELONA S MODERN KÉK MOZAIK MINTÁS FUTÓSZŐNYEG 80 X 200 CM",
       "img": "https://www.rugandroll.hu/img/33928/RURO0074/440x440,r/BARCELONA-S-Modern-kek-Mozaik-mintas-futoszonyeg-80x200.webp?time=1650488539",
       "size": "80x200",
@@ -61,7 +58,6 @@
       "pattern": "geometrikus",
       "volume": 968  ,
       "from": "Törökország",
-      "qualiy": "OEKO-TEX®100",
-      "quantity": 1
+      "qualiy": "OEKO-TEX®100"
     }
 ]

@@ -6,18 +6,29 @@
 
       <mat-form-field appearance="fill">
         <mat-label>Rendezés</mat-label>
-        <mat-select [(value)]="selected">
-          <mat-option value="az">Név szerint (A-Z)</mat-option>
-          <mat-option value="za">Név szerint (Z-A)</mat-option>
-          <mat-option value="arnov">Ár szerint(növekvő)</mat-option>
-          <mat-option value="arcsokk">Ár szerint(csökkenő)</mat-option>
+        <mat-select
+          [(value)]="selected"
+          (selectionChange)="onSelectChange($event.value)"
+        >
+          <mat-option value="nameAsc">Név szerint (A-Z)</mat-option>
+          <mat-option value="nameDesc">Név szerint (Z-A)</mat-option>
+          <mat-option value="priceAsc">Ár szerint(növekvő)</mat-option>
+          <mat-option value="priceDesc">Ár szerint(csökkenő)</mat-option>
+          <mat-option value="top3vol">Top 3 legsűrűbb</mat-option>
         </mat-select>
       </mat-form-field>
     </div>
     <div class="items">
       <div class="item" *ngFor="let product of productObject">
         <div class="fav_item">
-          <mat-icon svgIcon="heart" class="fav_item_ic"></mat-icon>
+          <mat-icon
+            svgIcon="heart"
+            class="fav_item_ic"
+            [ngClass]="{
+              'filled-heart': isProductInWishlist(product.id)
+            }"
+            (click)="toWishlist(userId, product)"
+          ></mat-icon>
         </div>
         <div class="carpet_img">
           <img src="{{ product.img }}" alt="" />
@@ -27,7 +38,7 @@
           {{ product.title }}
         </h6>
         <h6 class="price_h6">{{ product.price }} <span class="ft">Ft</span></h6>
-        <button type="button" class="more_btn" (click)="loadItem()">
+        <button type="button" class="more_btn" (click)="loadItem(product)">
           RÉSZLETEK
         </button>
       </div>

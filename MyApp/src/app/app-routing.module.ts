@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { AuthGuard } from './shared/services/auth.guard';
+import { ItemComponent } from './pages/item/item.component';
 
 const routes: Routes = [
   {
@@ -13,13 +14,18 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
+  path: 'item/:productId',
+  component: ItemComponent
+},
+  {
   path: 'home',
   loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
   
   },
   {
   path: 'gallery',
-  loadChildren: () => import('./pages/gallery/gallery.module').then(m => m.GalleryModule)
+  loadChildren: () => import('./pages/gallery/gallery.module').then(m => m.GalleryModule),
+   canActivate: [AuthGuard]
   },
   {
   path: 'item',

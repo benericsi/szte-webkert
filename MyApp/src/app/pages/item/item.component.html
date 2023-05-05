@@ -2,45 +2,43 @@
   <section>
     <div class="data_container">
       <div class="data">
-        <h1 class="title_h1">
-          BLUR S MODERN KÉK-MUSTÁRSÁRGA ABSZTRAKT MINTÁS FUTÓSZŐNYEG 80 X 200 CM
-        </h1>
+        <h1 class="title_h1">{{ product.title }}</h1>
         <div class="img_and_data_cont">
           <div class="img_cont">
-            <img
-              src="https://www.rugandroll.hu/img/33928/RURO0044/440x440,r/BLUR-S-Modern-kek-mustarsarga-Absztrakt-mintas-futoszonyeg-80x200.webp?time=1679924957"
-              alt=""
-            />
+            <img src="{{ product.img }}" alt="" />
           </div>
           <div class="data_cont">
             <h3>Adatok:</h3>
-
             <mat-list role="list">
               <mat-list-item role="listitem"
-                ><span>Méret:</span>80x200cm</mat-list-item
+                ><span>Méret:</span>{{ product.size }}</mat-list-item
               >
               <mat-list-item role="listitem"
-                ><span>Szín:</span>kék, fekete, sárgászöld,
-                törtfehér</mat-list-item
+                ><span>Szín:</span
+                ><ng-container
+                  *ngFor="let color of product.color; let last = last"
+                >
+                  {{ color }}{{ last ? "" : ", " }}
+                </ng-container></mat-list-item
               >
               <mat-list-item role="listitem"
-                ><span>Mintázat:</span>absztrakt</mat-list-item
+                ><span>Mintázat:</span>{{ product.pattern }}</mat-list-item
               >
               <mat-list-item role="listitem"
-                ><span>Sűrűség:</span>968 g/m²</mat-list-item
+                ><span>Sűrűség:</span>{{ product.volume }} g/m²</mat-list-item
               >
               <mat-list-item role="listitem"
-                ><span>Származási hely:</span>Törökország</mat-list-item
+                ><span>Származási hely:</span>{{ product.from }}</mat-list-item
               >
               <mat-list-item role="listitem"
-                ><span>Minősítés:</span>OEKO-TEX®100</mat-list-item
+                ><span>Minősítés:</span>{{ product.quality }}</mat-list-item
               >
             </mat-list>
           </div>
         </div>
       </div>
       <div class="to_cart">
-        <h2 class="price_h2">39400 <span class="ft">Ft</span></h2>
+        <h2 class="price_h2">{{ product.price }}<span class="ft">Ft</span></h2>
         <div class="buttons">
           <button type="button" class="cart_btn">KOSÁRBA</button>
         </div>

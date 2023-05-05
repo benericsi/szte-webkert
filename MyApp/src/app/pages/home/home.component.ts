@@ -65,6 +65,7 @@ export class HomeComponent{
       console.log(cred);
       this.router.navigateByUrl('/home#welcome_sect');
       alert('Sikeres bejelentkezés!');
+      this.loginForm.reset();
       
     }).catch(error => { 
       console.error(error);
@@ -85,6 +86,7 @@ export class HomeComponent{
         };
         //TODO: insert
         this.userService.create(user).then(_ => {
+          this.signupForm.reset();
           this.router.navigateByUrl('/home#welcome_sect');
           alert('Sikeres regisztráció!');
         }).catch(error => { 
