@@ -42,10 +42,6 @@ const routes: Routes = [
   loadChildren: () => import('./pages/contact/contact.module').then(m => m.ContactModule)
   },
   {
-  path: 'admin',
-  loadChildren: () => import('./pages/admin/admin.module').then(m => m.AdminModule)
-  },
-  {
   path: 'not-found',
   loadChildren: () => import('./pages/not-found/not-found.module').then(m => m.NotFoundModule)
   },

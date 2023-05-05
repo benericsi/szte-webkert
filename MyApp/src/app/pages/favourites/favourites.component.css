@@ -1,0 +1,85 @@
+#wishlist_container {
+  padding: 5rem 2% 0 2%;
+  min-height: calc(100vh - 5rem);
+  position: relative;
+  background-color: white;
+  color: var(--blue);
+}
+
+h1 {
+  width: 100%;
+  height: fit-content;
+  font-size: 3rem;
+}
+.favs {
+  position: relative;
+  margin-left: 10%;
+  width: 80%;
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.clear_list {
+  display: flex;
+  color: var(--orange);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.clear_list h1 {
+  font-size: 7rem;
+}
+
+.expansion_img {
+  height: 300px;
+  width: 300px;
+  margin-left: calc(50% - 150px);
+}
+
+@media screen and (max-width: 1024px) {
+  mat-expansion-panel-header,
+  mat-panel-description {
+    font-size: 20px;
+  }
+
+  .clear_list h1 {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  mat-expansion-panel-header,
+  mat-panel-description {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  mat-expansion-panel-header,
+  mat-panel-description {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .expansion_img {
+    height: auto;
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  mat-expansion-panel-header,
+  mat-panel-description {
+    font-size: 11px;
+  }
+
+  .clear_list h1 {
+    font-size: 4rem;
+  }
+}

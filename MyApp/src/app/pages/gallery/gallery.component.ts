@@ -85,7 +85,6 @@ export class GalleryComponent implements OnInit{
       this.favouritesService.addToWishlist(userId, product);
       alert("Termék a kedvencek közé került!");
     }
-    
   }
 
   loadItem(product: Product) { 
@@ -96,7 +95,7 @@ export class GalleryComponent implements OnInit{
     this.selected = event;
     console.log(this.selected)
 
-     switch (this.selected) {
+  switch (this.selected) {
     case 'nameAsc':
       this.galleryService.getItemsOrderByTitleAsc('').subscribe((data: Array<Product>) => { 
       console.log(data);

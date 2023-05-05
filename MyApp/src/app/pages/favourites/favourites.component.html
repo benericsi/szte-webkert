@@ -1,1 +1,32 @@
-<p>favourites works!</p>
+<div class="container">
+  <section id="wishlist_container">
+    <h1>Kedvencek</h1>
+    <div class="favs">
+      <div class="clear_list" *ngIf="wishlist?.length === 0">
+        <h1>A listád jelenleg üres!</h1>
+      </div>
+      <mat-accordion>
+        <mat-expansion-panel hideToggle="false" *ngFor="let wish of wishlist">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <span>
+                {{ wish.productTitle }}
+              </span>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <img class="expansion_img" src="{{ wish.productImg }}" /><img />
+          <mat-action-row>
+            {{ wish.productPrice | currency : "HUF" : "symbol-narrow" }}
+            <button
+              mat-stroked-button
+              color="warn"
+              (click)="removeFromList(userId, wish.productId)"
+            >
+              Eltávolítás
+            </button>
+          </mat-action-row>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+  </section>
+</div>
