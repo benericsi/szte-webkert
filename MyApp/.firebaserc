@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "webfejl-2023-kotprog": {
+      "hosting": {
+        "MyApp": [
+          "rugandroll-kotprog"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "webfejl-2023-kotprog"
+  }
+}

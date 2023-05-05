@@ -25,6 +25,25 @@ nav ul {
   float: left;
 }
 
+.kkk li {
+  position: relative;
+}
+
+.kkk li::after {
+  content: "";
+  position: absolute;
+  right: -15px;
+  top: 0;
+  height: 100%;
+  width: 0.1rem;
+  background-color: var(--white);
+  transform: rotate(15deg);
+}
+
+.kkk li:last-child::after {
+  content: none;
+}
+
 .icon_ul {
   position: absolute;
   right: 5%;
@@ -97,6 +116,10 @@ li a:hover {
     font-size: 18px;
     margin: 0 10px 0 10px;
   }
+
+  .kkk li::after {
+    right: -10px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -136,5 +159,9 @@ li a:hover {
 
   #check:checked ~ .kkk {
     left: 0;
+  }
+
+  li::after {
+    content: none !important;
   }
 }

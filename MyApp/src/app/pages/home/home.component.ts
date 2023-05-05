@@ -4,6 +4,7 @@ import { Route, Router } from '@angular/router';
 import { FakeLoadingService } from '../../shared/services/fake-loading.service';
 import { User } from '../../shared/models/User';
 import { ErrorStateMatcher } from '@angular/material/core';
+import { AuthService } from '../../shared/services/auth.service';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
@@ -22,7 +23,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 )
 export class HomeComponent{
 
-  constructor(private router: Router, private fb: FormBuilder, private loadingService: FakeLoadingService) { }
+  constructor(private router: Router, private fb: FormBuilder, private loadingService: FakeLoadingService, private authService: AuthService) { }
 
   matcher = new MyErrorStateMatcher();
 
@@ -51,17 +52,7 @@ export class HomeComponent{
   
   
   onLogin() {
-
     /*
-    if (data === 1) {
-        if (this.loginForm.get('login_email')?.value === 'asd' && this.loginForm.get('login_pw')?.value === 'asd') {
-          this.router.navigateByUrl('/home#welcome_sect');
-        } else {
-          alert('Hibás bejelentkezési adatok!');
-        }
-      }
-    */
-
     this.loadingService.loadingWithPromise().then((data: number) => {
       if (data === 1) {
         if (this.loginForm.get('login_email')?.value === 'asd' && this.loginForm.get('login_pw')?.value === 'asd') {
@@ -76,13 +67,29 @@ export class HomeComponent{
     }).finally(() => { 
       console.log('Executed finally');
     });
-
-  
+    */
+    
+    this.authService.login(this.loginForm.get('login_email')?.value!, this.loginForm.get('login_pw')?.value!).then(cred => {
+      console.log(cred);
+      this.router.navigateByUrl('/home#welcome_sect');
+      alert('Sikeres bejelentkezés!');
+      
+    }).catch(error => { 
+      console.error(error);
+      alert('Hibás bejelentkezési adatok!');
+    });
   }
   
   onSubmit() {
     if (this.signupForm.valid) {
-      console.log(this.signupForm.get('email')?.value);
+      this.authService.register(this.signupForm.get('email')?.value!, this.signupForm.get('password')?.value!).then(cred => {
+        console.log(cred);
+        this.router.navigateByUrl('/home#welcome_sect');
+        alert('Sikeres regisztráció!');
+      }).catch(error => { 
+        console.log(error);
+        alert('Hiba a regisztáció során!');
+      });
     }
   }
   

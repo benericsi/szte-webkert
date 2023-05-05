@@ -8,16 +8,19 @@
     <li>
       <a href="" [routerLink]="'/home'" fragment="welcome_sect">Kezdőlap</a>
     </li>
-    /
     <li><a href="" [routerLink]="'/gallery'">Kínálat</a></li>
-    /
     <li><a href="" [routerLink]="'/contact'">Kapcsolat</a></li>
   </ul>
 
   <ul class="icon_ul">
-    <li>
+    <li *ngIf="!loggedInUser">
       <a href="" [routerLink]="'/home'" fragment="forms"
         ><mat-icon svgIcon="profile" class="ic"></mat-icon
+      ></a>
+    </li>
+    <li *ngIf="loggedInUser">
+      <a href="" [routerLink]="'/home'" fragment="forms" (click)="logOut()"
+        ><mat-icon svgIcon="logout" class="ic"></mat-icon
       ></a>
     </li>
     <li>

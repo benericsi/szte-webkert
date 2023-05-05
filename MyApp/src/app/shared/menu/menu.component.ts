@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-menu',
@@ -8,15 +9,25 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 })
 export class MenuComponent implements OnInit{
   isGalleryRoute: boolean = false;
+  @Input() loggedInUser?: firebase.default.User | null;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private authService: AuthService) { }
   
   ngOnInit() {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.isGalleryRoute = ((event.url === '/gallery') || (event.url === '/item'));
       }
-    }
-    );
+    });
+   
   }
+
+  logOut() { 
+    this.authService.logout().then(() => { 
+      alert('Sikeres kijelentkezés!');
+    }).catch(error => { 
+      console.log(error);
+    });
+  }
+
 }
