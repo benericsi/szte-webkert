@@ -15,8 +15,7 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 @Component({
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
-  styleUrls: ['./gallery.component.css'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./gallery.component.css']
 })
 export class GalleryComponent implements OnInit{
 
@@ -40,7 +39,6 @@ export class GalleryComponent implements OnInit{
     });
     
     this.galleryService.getItemsOrderByTitleAsc('').subscribe((data: Array<Product>) => { 
-      console.log(data);
       this.productObject = data;
       this.sum = this.productObject.length;
     })

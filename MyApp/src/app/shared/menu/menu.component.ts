@@ -16,7 +16,7 @@ export class MenuComponent implements OnInit{
   ngOnInit() {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        this.isGalleryRoute = ((event.url === '/gallery') || event.url.startsWith('/item') || event.url.startsWith('/favourites'));
+        this.isGalleryRoute = ((event.url === '/gallery') || event.url.startsWith('/item') || event.url.startsWith('/favourites') || event.url.startsWith('/cart'));
       }
     });
    

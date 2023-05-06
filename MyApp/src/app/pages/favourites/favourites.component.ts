@@ -24,7 +24,6 @@ export class FavouritesComponent implements OnInit{
         this.userId = user.uid;
       }
       this.favouritesService.getWishlistItemsForUser(this.userId).subscribe((data: Array<WishlistItem>) => { 
-      console.log(data);
       this.wishlist = data;
     })
     });

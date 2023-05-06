@@ -15,6 +15,7 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideStorage, getStorage } from '@angular/fire/storage';
 import { AngularFireModule } from '@angular/fire/compat';
 import {MatBadgeModule} from '@angular/material/badge';
+import { ItemComponent } from './pages/item/item.component';
 
 @NgModule({
   declarations: [

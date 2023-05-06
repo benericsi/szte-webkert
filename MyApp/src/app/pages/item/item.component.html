@@ -40,7 +40,9 @@
       <div class="to_cart">
         <h2 class="price_h2">{{ product.price }}<span class="ft">Ft</span></h2>
         <div class="buttons">
-          <button type="button" class="cart_btn">KOSÁRBA</button>
+          <button type="button" class="cart_btn" (click)="toCart(product)">
+            KOSÁRBA
+          </button>
         </div>
       </div>
     </div>

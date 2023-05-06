@@ -1,1 +1,45 @@
-<p>cart works!</p>
+<div class="container">
+  <section class="cart_sect">
+    <h1>Kosár</h1>
+    <div class="clear_list" *ngIf="cart?.length === 0">
+      <h1>A kosarad jelenleg üres!</h1>
+    </div>
+    <div class="cartItem_cont" *ngFor="let cartItem of cart">
+      <div class="cartItem">
+        <h3>
+          {{ cartItem.productTitle }}
+        </h3>
+        <img src="{{ cartItem.productImg }}" />
+        <label>
+          Mennyiség:
+          <button (click)="onQuantityChange(cartItem, cartItem.quantity - 1)">
+            -
+          </button>
+          <input
+            type="number"
+            [value]="cartItem.quantity"
+            (input)="onQuantityChange(cartItem, cartItem.quantity)"
+            min="1"
+          />
+          <button (click)="onQuantityChange(cartItem, cartItem.quantity + 1)">
+            +
+          </button>
+        </label>
+        <label>
+          Ár: &nbsp;&nbsp;&nbsp;&nbsp;
+          {{
+            cartItem.productPrice * cartItem.quantity
+              | currency : "HUF" : "symbol-narrow"
+          }}
+        </label>
+        <button
+          mat-stroked-button
+          color="warn"
+          (click)="removeItemFromCart(cartItem)"
+        >
+          Eltávolítás
+        </button>
+      </div>
+    </div>
+  </section>
+</div>
