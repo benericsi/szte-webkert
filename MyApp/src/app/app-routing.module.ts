@@ -42,8 +42,9 @@ const routes: Routes = [
   loadChildren: () => import('./pages/contact/contact.module').then(m => m.ContactModule)
   },
   {
-  path: 'admin',
-  loadChildren: () => import('./pages/admin/admin.module').then(m => m.AdminModule)
+  path: 'cart',
+  loadChildren: () => import('./pages/cart/cart.module').then(m => m.CartModule),
+  canActivate: [AuthGuard]
   },
   {
   path: 'not-found',
