@@ -8,3 +8,6 @@ Ez orvosolható úgy, hogy a node_modules/@angular/fire/compat/firestore/interfa
 a 15. és 24. sorban a data(options?: SnapshotOptions): -nél a T helyére any-t írunk.
 
 A kosárból való törlés sajnos nem működik az elvártnak megfelelően :,(
+Ha kérdésed van: Ricsi#6043 discordon
+
+Köszönöm!
