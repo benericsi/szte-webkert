@@ -28,6 +28,7 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .cartItem:hover {
@@ -65,12 +66,51 @@ button {
 }
 
 @media screen and (max-width: 1024px) {
+  h3 {
+    font-size: 20px;
+  }
+
   .clear_list h1 {
     font-size: 5rem;
   }
 }
 
+@media screen and (max-width: 830px) {
+  h3 {
+    font-size: 15px;
+  }
+
+  .cartItem_cont {
+    width: 90%;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  h3 {
+    font-size: 13px;
+  }
+  input[type="number"] {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  img {
+    height: auto;
+    width: 100%;
+    margin: 0;
+  }
+  input[type="number"] {
+    width: 75px;
+  }
+}
+
 @media screen and (max-width: 320px) {
+  h3 {
+    font-size: 11px;
+  }
+
   .clear_list h1 {
     font-size: 4rem;
   }
