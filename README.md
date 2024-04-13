@@ -9,6 +9,8 @@ a 15. és 24. sorban a data(options?: SnapshotOptions): -nél a T helyére any-t
 
 A kosárból való törlés sajnos nem működik az elvártnak megfelelően :,(
 
+Demo: https://rugandroll-kotprog.web.app/
+
 Ha kérdésed van: Ricsi#6043 discordon
 
 Köszönöm!
